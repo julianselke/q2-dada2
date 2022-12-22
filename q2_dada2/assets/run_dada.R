@@ -13,7 +13,7 @@
 #             DESCRIPTION OF ARGUMENTS             #
 ####################################################
 # NOTE: All numeric arguments should be zero or positive.
-# NOTE: All numeric arguments save maxEE are expected to be integers.
+# NOTE: All numeric arguments save maxEE and kdist_cutoff are expected to be integers.
 # NOTE: Currently the filterered_dir must already exist.
 # NOTE: ALL ARGUMENTS ARE POSITIONAL!
 #
@@ -122,17 +122,16 @@
 #                               to be treated as normal gaps.
 #    Ex: -1
 #
+### SEQUENCE COMPARISON HEURISTICS ARGUMENTS ###
 # 22) band_size - When set, banded Needleman-Wunsch alignments are performed.
 #                 The default value of band_size is 16. Setting BAND_SIZE to a negative
 #                 number turns off banding (i.e. full Needleman-Wunsch).
 #    Ex: 32
 #
-### SEQUENCE COMPARISON HEURISTICS ARGUMENTS ###
-#
-# 23) band_size - The default value of 0.42 was chosen to screen pairs of sequences that differ by >10\%, and was
-#                 calibrated on Illumina sequenced 16S amplicon data. The assumption is that sequences that differ by such a large
-#                 amount cannot be linked by amplicon errors (i.e. if you sequence one, you won't get a read of other) and so
-#                 careful (and costly) alignment is unnecessary.
+# 23) kdist_cutoff - The default value of 0.42 was chosen to screen pairs of sequences that differ by >10\%, and was
+#                    calibrated on Illumina sequenced 16S amplicon data. The assumption is that sequences that differ by such a large
+#                    amount cannot be linked by amplicon errors (i.e. if you sequence one, you won't get a read of other) and so
+#                    careful (and costly) alignment is unnecessary.
 #    Ex: 0.42
 #
 
